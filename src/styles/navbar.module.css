@@ -1,0 +1,165 @@
+.navbar {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-i);
+  contain: content ;
+}
+
+.titleContainer {
+  padding-left: 10vw;
+  padding-right: 3vw;
+}
+
+.titleContainer span {
+  margin-top: auto;
+  margin-bottom: 3vh;
+  font-size: 26px;
+  color: var(--color-iii);
+}
+
+.titleContainer img {
+  height: 7vh;
+}
+
+.searchCompact {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #000;
+  max-width: 35vw;
+  padding-right: 0;
+}
+
+.searchSelect {
+  height: 4vh;
+  width: 9vw;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  overflow: hidden;
+}
+
+.searchInput {
+  width: 35vw;
+  height: 4vh;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  overflow: hidden;
+}
+
+.searchInput input {
+  height: 4vh;
+}
+
+.searchInput span {
+  height: 4vh;
+}
+
+.searchButtonsContainer {
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vh;
+}
+
+.imageSearch {
+  margin: auto;
+  border: 0;
+  font-size: large;
+}
+
+.searchButtonInnerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #aaa;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 3vh;
+  background-color: var(--color-iii);
+  color: var(--color-i);
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background-color: var(--color-iii);
+  color: var(--color-i);
+  font-size: medium;
+  margin-left: 1vw;
+  margin-right: 0.5vw;
+}
+
+.searchText {
+  align-items: center;
+  font-size: medium;
+  margin: auto;
+  padding-right: 1vw;
+}
+
+
+
+
+.navbar ul {
+  background-color: lightblue;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+  color: #000;
+  font-size: large;
+}
+
+.deliveryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+}
+
+.deliveryText {
+  font-size: 14px;
+}
+
+.deliveryMenu {
+
+}
+
+.language {
+  margin-left: 2vw;
+}
+
+.cart {
+  margin-left: 2vw;
+  font-size: 24px;
+}
+
+.signin {
+  margin-left: 2vw;
+}
+
+.signup {
+  border: 1px solid var(--color-iii);
+  background-color: var(--color-iii);
+  border-radius: 999px;
+  padding: 8px 1.5vw 8px 1.5vw;
+  margin-left: 2vw;
+  color: var(--color-i);
+  text-align: center;
+}

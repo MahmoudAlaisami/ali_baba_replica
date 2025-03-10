@@ -1,0 +1,46 @@
+.container {
+  min-height: 70vh;
+  width: 100%;
+  max-width: 100%;
+  background-image: url("../../public/background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  background-color: aquamarine;
+  background-color: var(--color-ii);
+}
+
+.navbar {
+  color: var(--color-i);
+}
+
+.headerContainer {
+  color: var(--color-i);
+}
+
+.headerDescription {
+  color: var(--color-i);
+  display: flex;
+  margin-left: 10vw;
+  margin-top: 20vh;
+}
+
+.headerDescription img {
+  height: 5vh;
+  height: 22px;
+  margin-right: 0.2vw;
+}
+
+.headerDescription span {
+  height: 5vh;
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 46px;
+  font-weight: bold;
+  max-width: 50vw;
+  text-align: left;
+  margin-left: 10vw;
+  margin-top: 4vh;
+}

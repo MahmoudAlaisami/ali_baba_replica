@@ -1,4 +1,4 @@
-import styles from './App.module.css';
+import styles from './styles/App.module.css';
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Landing from './pages/Landing';
 

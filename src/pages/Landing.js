@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
+import Intro from '../components/Intro'
+import styles from "../styles/landing.module.css"
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className={styles.container}>
+      {/* <Navbar /> */}
+      <Intro />
+      kaclka
+    </div>
   )
 }
 
