@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Intro from '../components/Intro'
+import Cards from '../components/Cards'
 import styles from "../styles/landing.module.css"
 
 const Landing = () => {
@@ -8,7 +9,8 @@ const Landing = () => {
     <div className={styles.container}>
       {/* <Navbar /> */}
       <Intro />
-      kaclka
+      <Cards />
+      {/* kaclka */}
     </div>
   )
 }

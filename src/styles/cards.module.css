@@ -1,0 +1,53 @@
+.container {
+  height: 45vh;
+  width: 100vw;
+  background-color: var(--color-ii);
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+}
+
+.cardContainer {
+  width: 17vw;
+  margin: 10px;
+  margin-right: 1.5vw;
+  background-color: var(--color-ii-i);
+  border-radius: 15px;
+}
+
+.cardImgContainer {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  width: 6vh;
+  margin-left: 10%;
+  /* background-color: rgb(255,255,255,0.2); */
+  background-color: rgb(100, 100, 100, 0.2);
+  box-shadow: 1px 2px rgb(100, 100, 100, 0.2);
+  border-radius: 50%;
+}
+
+.cardImg {
+  /* background-color: blue; */
+  height: 5vh;
+  width: 5vh;
+}
+
+.cardTitle {
+  color: var(--color-i);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10%;
+}
+
+.cardDesc {
+  color: var(--color-i);
+  font-size: 18px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: left;
+}
