@@ -75,11 +75,26 @@
   right: 15vw;
 }
 
-@media (min-width: 480px) {
-  /* Styles for mobile (medium) */
+@media (max-width: 479px) {
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) and (max-width: 767px){
+  .innerContainer {
+    height: 42vh;
+    width: 75%;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .leftContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
   .prev {
     left: 8vw;
   }
