@@ -1,29 +1,23 @@
 import React from 'react'
 import styles from "../styles/navbar.module.css"
 import { useNavigate } from "react-router-dom";
-import { Button, Input, Select, Space } from 'antd';
+import { Button, Input, Select, Space, Dropdown } from 'antd';
 import {
   CameraOutlined, SearchOutlined, ShoppingCartOutlined, UserOutlined,GlobalOutlined
 } from "@ant-design/icons";
+import country from 'country-list-js';
+import { navbarOptions as options } from '../utils/constants';
 
 
 const Navbar = () => {
+  const [selectedCountry, setSelectedCountry] = React.useState("United States");
   const navigate = useNavigate();
-
-  const options = [
-    {
-      value: 'products',
-      label: 'Products',
-    },
-    {
-      value: 'manufacturers',
-      label: 'Manufacturers',
-    },
-    {
-      value: 'suppliers',
-      label: 'Suppliers',
-    }
-  ];
+  let country_names = country.names();
+  const countries = country_names.map((country, index) => ({
+    key: index + 1,
+    label: (<span>{country}</span>),
+    onClick: () => setSelectedCountry(country)
+  }));
 
   return (
     <div className={styles.navbar}>
@@ -46,11 +40,12 @@ const Navbar = () => {
           />
         </Space.Compact>
 
-        <div className={styles.deliveryContainer}>
-          <span className={styles.deliveryText}>Deliver to</span>
-          <span className={styles.deliveryMenu}>flag</span>
-        </div>
-
+        <Dropdown menu={{ items: countries }} trigger={"click"}>
+          <div className={styles.deliveryContainer}>
+            <span className={styles.deliveryText}>Deliver to</span>
+            <span className={styles.deliveryMenu}>{selectedCountry}</span>
+          </div>
+        </Dropdown>
         <div className={styles.language}><GlobalOutlined /> US</div>
         <div onClick={()=>navigate('my_cart')} className={styles.cart}><ShoppingCartOutlined /></div>
         <div onClick={()=>navigate('signin')} className={styles.signin}><UserOutlined /> Sign in</div>

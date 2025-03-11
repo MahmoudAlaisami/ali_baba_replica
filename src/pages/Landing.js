@@ -8,7 +8,7 @@ import styles from "../styles/landing.module.css"
 const Landing = () => {
   return (
     <div className={styles.container}>
-      {/* <Navbar /> */}
+      <Navbar />
       <Intro />
       <Cards />
       <Founders />

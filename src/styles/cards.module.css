@@ -52,3 +52,30 @@
   padding-right: 10%;
   text-align: left;
 }
+
+@media (min-width: 480px) {
+  /* Styles for mobile (medium) */
+}
+
+@media (min-width: 768px) {
+  /* Styles for tablets */
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .container {
+    height: 52vh;
+  }
+  .cardContainer {
+    width: 18vw;
+    margin-top: 0;
+    height: 85%;
+  }
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardDesc {
+    font-size: 16px;
+    line-height: 2.6vh;
+  }
+}

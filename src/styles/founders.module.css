@@ -74,3 +74,33 @@
   position: absolute;
   right: 15vw;
 }
+
+@media (min-width: 480px) {
+  /* Styles for mobile (medium) */
+}
+
+@media (min-width: 768px) {
+  /* Styles for tablets */
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .innerContainer {
+    width: 88%;
+  }
+  .prev {
+    left: 10vw;
+  }
+  .next {
+    right: 10vw;
+  }
+  .avatar {
+    margin-left: 2vw;
+  }
+  .description {
+    margin-right: 2vw;
+    max-width: 38vw;
+  }
+  .titleContainer {
+    max-width: 18vw;
+  }
+}

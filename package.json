@@ -8,7 +8,7 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.24.3",
-    "countries-list": "^3.1.1",
+    "country-list-js": "^3.1.8",
     "i": "^0.3.7",
     "npm": "^11.2.0",
     "react": "^19.0.0",

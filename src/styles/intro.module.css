@@ -1,17 +1,25 @@
 .container {
   min-height: 70vh;
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   background-image: url("../../public/background.jpg");
   background-size: contain;
+  overflow: hidden;
   background-repeat: no-repeat;
-
-  background-color: aquamarine;
   background-color: var(--color-ii);
 }
 
 .navbar {
-  color: var(--color-i);
+  display: flex;
+  margin-left: 8vw;
+  margin-top: 1vh;
+  gap: 1vw;
+  font-size: 16px;
+  color: var(--color-i-i);
+}
+
+.navbarSeperator {
+  margin-left: 35vw;
 }
 
 .headerContainer {
@@ -43,4 +51,25 @@
   text-align: left;
   margin-left: 10vw;
   margin-top: 4vh;
+}
+
+@media (min-width: 480px) {
+  /* Styles for mobile (medium) */
+}
+
+@media (min-width: 768px) {
+  /* Styles for tablets */
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .container {
+    min-height: 60vh;
+  }
+  .navbar span {
+    max-width: 10vw;
+    margin: auto;
+  }
+  .headerDescription {
+    margin-top: 12vh;
+  }
 }

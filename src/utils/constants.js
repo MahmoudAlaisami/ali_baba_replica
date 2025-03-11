@@ -39,3 +39,18 @@ export const foundersData = [
     description: '“Alibaba.com is a game changer for small businesses like us. We were able to find the exact product we needed and I don’t think we could have sourced anything without Alibaba.com.”'
   }
 ]
+
+export const navbarOptions = [
+  {
+    value: 'products',
+    label: 'Products',
+  },
+  {
+    value: 'manufacturers',
+    label: 'Manufacturers',
+  },
+  {
+    value: 'suppliers',
+    label: 'Suppliers',
+  }
+];
