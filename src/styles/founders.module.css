@@ -80,7 +80,27 @@
 }
 
 @media (min-width: 768px) {
-  /* Styles for tablets */
+  .prev {
+    left: 8vw;
+  }
+  .next {
+    right: 8vw;
+  }
+  .titleContainer {
+    max-width: 18vw;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .position {
+    font-size: 15px;
+    color: rgb(0, 0, 0, 0.7);
+    text-align: left;
+  }
+  .description {
+    font-size: 18px;
+    line-height: 3vh;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1366px) {

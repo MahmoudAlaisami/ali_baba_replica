@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "../styles/navbar.module.css"
 import { useNavigate } from "react-router-dom";
-import { Button, Input, Select, Space, Dropdown } from 'antd';
+import { Button, Input, Select, Space, Dropdown, Drawer } from 'antd';
 import {
-  CameraOutlined, SearchOutlined, ShoppingCartOutlined, UserOutlined,GlobalOutlined
+  CameraOutlined, SearchOutlined, ShoppingCartOutlined, UserOutlined,GlobalOutlined, MenuOutlined
 } from "@ant-design/icons";
 import country from 'country-list-js';
 import { navbarOptions as options } from '../utils/constants';
@@ -11,6 +11,7 @@ import { navbarOptions as options } from '../utils/constants';
 
 const Navbar = () => {
   const [selectedCountry, setSelectedCountry] = React.useState("United States");
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const navigate = useNavigate();
   let country_names = country.names();
   const countries = country_names.map((country, index) => ({
@@ -21,6 +22,11 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbar}>
+      <Button
+        icon={<MenuOutlined />}
+        className={styles.menuButton}
+        onClick={() => setIsMenuOpen(true)}
+      />
       <div className={styles.titleContainer}>
         <img src="./logo-512.png" alt="AliBaba Logo"/>
         <span><span style={{fontWeight: 'bold'}}>Alibaba</span>.com</span>
@@ -50,6 +56,24 @@ const Navbar = () => {
         <div onClick={()=>navigate('my_cart')} className={styles.cart}><ShoppingCartOutlined /></div>
         <div onClick={()=>navigate('signin')} className={styles.signin}><UserOutlined /> Sign in</div>
         <div onClick={()=>navigate('signup')} className={styles.signup}>Sign up</div>
+
+        <Drawer
+        title="Alibab.com"
+        placement="left"
+        onClose={() => setIsMenuOpen(false)}
+        open={isMenuOpen}
+        className={styles.drawer}
+      >
+        <Dropdown menu={{ items: countries }} trigger={["click"]}>
+          <div className={styles.drawerDeliveryContainer}>
+            <span className={styles.drawerDeliveryText}>Deliver to</span>
+            <span className={styles.drawerDeliveryMenu}>{selectedCountry}</span>
+          </div>
+        </Dropdown>
+
+        <div className={styles.drawerLanguage}><GlobalOutlined /> US</div>
+        <div onClick={() => navigate('my_cart')} className={styles.drawerCart}><ShoppingCartOutlined /> My Cart</div>
+      </Drawer>
     </div>
   )
 }

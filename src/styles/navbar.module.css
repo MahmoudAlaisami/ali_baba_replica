@@ -2,7 +2,6 @@
   width: 100%;
   height: 8vh;
   display: flex;
-  /* justify-content: space-between; */
   justify-content: flex-start;
   align-items: center;
   background-color: var(--color-i);
@@ -151,23 +150,141 @@
   cursor: pointer;
 }
 
-
-@media (min-width: 480px) {
-  /* Styles for mobile (medium) */
+.menuButton {
+  border: 0;
+  display: none;
 }
 
-@media (min-width: 768px) {
+.drawer {
+  display: none;
+}
+
+.drawerDeliveryContainer {
+  margin-bottom: 3vh;
+}
+.drawerLanguage {
+  margin-bottom: 3vh;
+
+}
+.drawerCart {
+  margin-bottom: 3vh;
+}
+
+@media (max-width: 479px) {
+  .menuButton {
+    display: block;
+  }
+  .drawer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  .titleContainer span {
+    display: none;
+  }
+  .language, .deliveryContainer, .searchSelect, .searchText, .imageSearch, .cart {
+    display: none;
+  }
   .titleContainer {
-    padding-left: 2vw;
+    padding-left: 3vw;
+    padding-right: 2vw;
+  }
+  .signin {
+    margin-left: 3vw;
+    font-size: 10px;
+  }
+  .signup {
+    font-size: 10px;
+    margin-left: 3vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .titleContainer span {
+    font-size: 18px;
+  }
+  .language, .deliveryContainer, .searchSelect, .searchText, .imageSearch, .cart {
+    display: none;
+  }
+  .searchButtonInnerContainer {
+    margin-right: 0;
+  }
+  .titleContainer {
+    padding-left: 5vw;
+    padding-right: 2vw;
+  }
+  .signin {
+    margin-left: 3vw;
+    font-size: 12px;
+  }
+  .signup {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+  .titleContainer {
+    padding-left: 3vw;
+  }
+  .titleContainer img {
+    height: 5vh;
+  }
+  .titleContainer span {
+    font-size: 20px;
+  }
+  .searchSelect {
+    height: 3vh;
+  }
+  .searchInput {
+    height: 3vh;
+  }
+  .searchInput input {
+    height: 3vh;
+  }
+  .searchInput span {
+    height: 3vh;
+  }
+  .searchButton {
+    margin-left: 0vw;
+    margin-right: 0vw;
   }
   .searchText {
     display: none;
   }
   .searchButtonInnerContainer {
-    height: 4vh;
-    width: 4vh;
-    align-items: center;
-    justify-content: center;
+    height: 2.3vh;
+    width: 2.5vh;
+  }
+  .deliveryContainer {
+    margin-left: 2vw;
+    margin-left: 1.5vw;
+    margin-right: 0;
+  }
+  .deliveryText {
+    font-size: 10px;
+  }
+  .deliveryMenu {
+    font-size: 11px;
+  }
+  .language {
+    font-size: 12px;
+    margin-left: 1.5vw;
+    margin-right: 0;
+  }
+  .cart {
+    font-size: 18px;
+    margin-left: 1.5vw;
+    margin-right: 0;
+  }
+  .signin {
+    font-size: 10px;
+    margin-left: 1.5vw;
+    margin-right: 0;
+  }
+  .signup {
+    font-size: 10px;
+    margin-left: 1.5vw;
+    margin-right: 0;
   }
 }
 

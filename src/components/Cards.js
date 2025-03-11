@@ -4,8 +4,6 @@ import { cardsData } from '../utils/constants'
 
 const Cards = () => {
 
-  const src = "./windowsIcon.png"
-
   return (
     <div className={styles.container}>
       {cardsData.map(card => (
