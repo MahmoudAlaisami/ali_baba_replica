@@ -9,6 +9,7 @@
 
 .cardContainer {
   width: 17vw;
+  height: 85%;
   margin: 10px;
   margin-right: 1.5vw;
   background-color: var(--color-ii-i);

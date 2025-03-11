@@ -20,3 +20,22 @@ export const cardsData = [
     description: "Get curated benefits, such as exclusive discounts, enhanced protection, and extra support, to help grow your business every step of the way."
   }
 ]
+
+export const foundersData = [
+  {
+    avatar: "./evaJane.jpg",
+    title: "Eva Jane",
+    position: "Founder of Eva Jane Beauty",
+    description: '“As an entrepreneur who is deeply involved in the Beauty industry, I have been very devoted to creating my original products. Alibaba.com has been my trusted partner in this process.”'
+  },{
+    avatar: "sayed.jpg",
+    title: "Dr. Sayed Ibrihim",
+    position: "Founder of SprinJene",
+    description: '“Once I discovered Alibaba.com, I was amazed at how many options I had with suppliers from all over the world.”'
+  },{
+    avatar: "ronWilliams.jpg",
+    title: "Ron Williams and Tonja Williams",
+    position: "Founder and CEO (respectively) of Ron Williams Fitness",
+    description: '“Alibaba.com is a game changer for small businesses like us. We were able to find the exact product we needed and I don’t think we could have sourced anything without Alibaba.com.”'
+  }
+]
