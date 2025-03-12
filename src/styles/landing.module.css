@@ -1,5 +1,5 @@
 .container {
-  background-color: #aaa;
+  background-color: var(--color-ii);
   width: 100vw;
   max-width: 100vw;
   /* height: 100vh; */

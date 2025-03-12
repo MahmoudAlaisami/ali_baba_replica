@@ -1,35 +1,46 @@
-import React from "react";
+import React, { useState, useCallback, useMemo, useEffect } from "react";
 import styles from "../styles/founders.module.css";
 import { foundersData } from "../utils/constants";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 const Founders = () => {
-  const [currIndex, setCurrIndex] = React.useState(0);
+  const [currIndex, setCurrIndex] = useState(0);
+  const totalFounders = foundersData.length;
 
-  const prevSlide = () => {
-    setCurrIndex((prev) => (prev === 0 ? foundersData.length - 1 : prev - 1));
-  };
+  const prevSlide = useCallback(() => {
+    setCurrIndex((prev) => (prev === 0 ? totalFounders - 1 : prev - 1));
+  }, [totalFounders]);
 
-  const nextSlide = () => {
-    setCurrIndex((prev) => (prev === foundersData.length - 1 ? 0 : prev + 1));
-  };
+  const nextSlide = useCallback(() => {
+    setCurrIndex((prev) => (prev === totalFounders - 1 ? 0 : prev + 1));
+  }, [totalFounders]);
+
+  const founder = useMemo(() => foundersData[currIndex], [currIndex]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") prevSlide();
+      if (e.key === "ArrowRight") nextSlide();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [prevSlide, nextSlide]);
 
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
         <div className={styles.leftContainer}>
-          <LeftOutlined onClick={prevSlide} className={styles.prev}/>
-          <img className={styles.avatar} src={foundersData[currIndex].avatar} />
+          <LeftOutlined onClick={prevSlide} className={styles.prev} />
+          <img className={styles.avatar} src={founder.avatar} alt={founder.title} />
           <div className={styles.titleContainer}>
-            <div className={styles.title}>{foundersData[currIndex].title}</div>
-            <div className={styles.position}>{foundersData[currIndex].position}</div>
+            <div className={styles.title}>{founder.title}</div>
+            <div className={styles.position}>{founder.position}</div>
           </div>
         </div>
         <div className={styles.rightContainer}>
-          <div className={styles.description}>{foundersData[currIndex].description}</div>
-          {/* <div className={styles.next}> */}
-          <RightOutlined onClick={nextSlide} className={styles.next}/>
-          {/* </div> */}
+        <LeftOutlined onClick={prevSlide} className={styles.prevRightCont} />
+          <div className={styles.description}>{founder.description}</div>
+          <RightOutlined onClick={nextSlide} className={styles.next} />
         </div>
       </div>
     </div>
